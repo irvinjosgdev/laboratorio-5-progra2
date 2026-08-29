@@ -1,0 +1,1804 @@
+{
+  "info": {
+    "name": "APIs REST - LaboratorioV",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080"
+    }
+  ],
+  "item": [
+    {
+      "name": "01 Productos",
+      "item": [
+        {
+          "name": "GET todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/productos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "productos"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "GET por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/productos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Audifonos Bluetooth\",\n    \"precio\": 250.0,\n    \"categoria\": \"Electronica\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/productos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "productos"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "PUT",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Laptop Lenovo ThinkPad X1\",\n    \"precio\": 4800.0,\n    \"categoria\": \"Electronica\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/productos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"precio\": 4700.0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/productos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/productos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "productos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "02 Estudiantes",
+      "item": [
+        {
+          "name": "GET todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/estudiantes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "estudiantes"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "GET por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/estudiantes/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "estudiantes",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Pedro\",\n    \"apellido\": \"Gomez\",\n    \"carrera\": \"Medicina\",\n    \"edad\": 19\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/estudiantes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "estudiantes"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "PUT",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Maria Jose\",\n    \"apellido\": \"Lopez\",\n    \"carrera\": \"Ingenieria en Sistemas\",\n    \"edad\": 22\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/estudiantes/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "estudiantes",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"edad\": 22\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/estudiantes/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "estudiantes",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/estudiantes/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "estudiantes",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "03 Libros",
+      "item": [
+        {
+          "name": "GET todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/libros",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "libros"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "GET por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/libros/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "libros",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"titulo\": \"Don Quijote de la Mancha\",\n    \"autor\": \"Miguel de Cervantes\",\n    \"genero\": \"Novela\",\n    \"precio\": 200.0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/libros",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "libros"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "PUT",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"titulo\": \"Cien anos de soledad (edicion especial)\",\n    \"autor\": \"Gabriel Garcia Marquez\",\n    \"genero\": \"Realismo magico\",\n    \"precio\": 210.0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/libros/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "libros",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"precio\": 190.0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/libros/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "libros",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/libros/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "libros",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "04 Empleados",
+      "item": [
+        {
+          "name": "GET todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/empleados",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "empleados"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "GET por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/empleados/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "empleados",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Fernando Reyes\",\n    \"puesto\": \"Contador\",\n    \"salario\": 7800.0,\n    \"departamento\": \"Finanzas\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/empleados",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "empleados"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "PUT",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Gabriela Morales\",\n    \"puesto\": \"Directora de Ventas\",\n    \"salario\": 14000.0,\n    \"departamento\": \"Ventas\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/empleados/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "empleados",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"salario\": 9800.0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/empleados/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "empleados",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/empleados/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "empleados",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "05 Peliculas",
+      "item": [
+        {
+          "name": "GET todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/peliculas",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "peliculas"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "GET por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/peliculas/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "peliculas",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"titulo\": \"Whiplash\",\n    \"director\": \"Damien Chazelle\",\n    \"genero\": \"Drama\",\n    \"anio\": 2014\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/peliculas",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "peliculas"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "PUT",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"titulo\": \"El padrino II\",\n    \"director\": \"Francis Ford Coppola\",\n    \"genero\": \"Drama\",\n    \"anio\": 1974\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/peliculas/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "peliculas",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"anio\": 2015\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/peliculas/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "peliculas",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/peliculas/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "peliculas",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "06 Cursos",
+      "item": [
+        {
+          "name": "GET todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/cursos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "cursos"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "GET por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/cursos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "cursos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Inteligencia Artificial\",\n    \"descripcion\": \"Fundamentos de IA y machine learning\",\n    \"creditos\": 4,\n    \"modalidad\": \"Virtual\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/cursos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "cursos"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "PUT",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Programacion 2 Avanzado\",\n    \"descripcion\": \"POO, colecciones y excepciones\",\n    \"creditos\": 5,\n    \"modalidad\": \"Presencial\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/cursos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "cursos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"modalidad\": \"Virtual\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/cursos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "cursos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/cursos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "cursos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "07 Vehiculos",
+      "item": [
+        {
+          "name": "GET todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/vehiculos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "vehiculos"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "GET por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/vehiculos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "vehiculos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"marca\": \"Nissan\",\n    \"modelo\": \"Sentra\",\n    \"anio\": 2023,\n    \"precio\": 165000.0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/vehiculos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "vehiculos"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "PUT",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"marca\": \"Toyota\",\n    \"modelo\": \"Corolla LE\",\n    \"anio\": 2023,\n    \"precio\": 150000.0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/vehiculos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "vehiculos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"precio\": 150000.0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/vehiculos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "vehiculos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/vehiculos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "vehiculos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "08 Tareas",
+      "item": [
+        {
+          "name": "GET todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/tareas",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tareas"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "GET por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/tareas/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tareas",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"titulo\": \"Grabar video de demo\",\n    \"descripcion\": \"Mostrar cada endpoint en Postman\",\n    \"prioridad\": \"Alta\",\n    \"completada\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/tareas",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tareas"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "PUT",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"titulo\": \"Preparar entrega de laboratorio\",\n    \"descripcion\": \"Terminar las 10 APIs REST del curso\",\n    \"prioridad\": \"Alta\",\n    \"completada\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/tareas/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tareas",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"completada\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/tareas/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tareas",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/tareas/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "tareas",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "09 Clientes",
+      "item": [
+        {
+          "name": "GET todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/clientes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "clientes"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "GET por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/clientes/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Karla\",\n    \"apellido\": \"Rios\",\n    \"correo\": \"karla.rios@correo.com\",\n    \"telefono\": \"55678901\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/clientes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "clientes"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "PUT",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Jose Miguel\",\n    \"apellido\": \"Fuentes\",\n    \"correo\": \"jose.fuentes@correo.com\",\n    \"telefono\": \"55999888\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/clientes/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"telefono\": \"55123999\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/clientes/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/clientes/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "10 Pedidos",
+      "item": [
+        {
+          "name": "GET todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/pedidos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "pedidos"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "GET por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/pedidos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "pedidos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"cliente\": \"Karla Rios\",\n    \"producto\": \"Teclado mecanico\",\n    \"cantidad\": 1,\n    \"total\": 350.0,\n    \"estado\": \"PENDIENTE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/pedidos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "pedidos"
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "PUT",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"cliente\": \"Jose Fuentes\",\n    \"producto\": \"Laptop Lenovo ThinkPad X1\",\n    \"cantidad\": 1,\n    \"total\": 4800.0,\n    \"estado\": \"ENVIADO\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/pedidos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "pedidos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"estado\": \"ENVIADO\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/pedidos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "pedidos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/pedidos/{{id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "pedidos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
